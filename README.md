@@ -1,1 +1,1 @@
-# Examination-Individuell-inl-mningsuppgift
+# Examination-Individuell-inlamningsuppgift
