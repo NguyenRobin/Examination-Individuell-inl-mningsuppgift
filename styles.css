@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #f1f3f5;
@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-  /* font-size: 5rem; */
+  font-size: 2rem;
 }
 
 /****************************** 
@@ -79,6 +79,8 @@ HEADER AND NAVIGATION
 .header__nav-desktop a {
   color: #fff;
   text-decoration: none;
+  font-weight: 200;
+  /* font-size: 1rem; */
 }
 
 .header__nav-desktop {
@@ -361,21 +363,6 @@ RESPONSIVE MEDIA
     text-decoration: none;
   }
 
-  .booking-available {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    gap: 2rem;
-    padding-bottom: 4rem;
-  }
-
-  .main__check-in,
-.main__check-out,
-.main__check-in-adults,
-.main__check-in-kids {
-flex: 1;
-}
-
   .main {
     gap: 1rem;
     margin-bottom: 2rem;
@@ -412,6 +399,28 @@ flex: 1;
 }
   }
 
+  @media screen and (min-width: 965px) {
+    .booking-available {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: center;
+      gap: 2rem;
+      padding-bottom: 4rem;
+    }
+  
+    .main__check-in,
+  .main__check-out,
+  .main__check-in-adults,
+  .main__check-in-kids {
+  flex: 1;
+  
+  }
+  
+  .fake-button {
+    align-self: center;
+  }
+  }
+
 /*********************************************************************** 
 /* HOTEL AND FACULTIES: hotel.html 
 *********************************************************************** */
@@ -425,14 +434,10 @@ flex: 1;
   grid-template-areas:
     "header"
     "introduction"
-    "restaurant"
-    "breakfast"
-    "bar"
-    "gym"
-    "wifi"
-    "pool"
+"main"
     "footer";
 }
+
 .header-hotel {
   grid-area: header;
   display: flex;
@@ -519,6 +524,6 @@ flex: 1;
   background-image: url(images-hotel/pool.jpg);
 }
 
-.footer {
-  /* grid-area: footer; */
-}
+/* .footer {
+  grid-area: footer;
+} */
