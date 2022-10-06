@@ -429,7 +429,23 @@ FOOTER
 /*********************************************************************** 
 /* SEARCH RESULT ROOM: booking.html 
 *********************************************************************** */
+.wrapper-booking {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer-socials"
+    "footer";
+}
+
 .search-booking {
+  grid-area: nav;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -477,47 +493,84 @@ FOOTER
 
 /* MAIN CONTENT ROOM TO BOOK */
 
+.main-header {
+  grid-area: main;
+  padding: 1rem;
+  font-weight: 200;
+  color: #212529;
+}
 .product-rooms {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1rem;
-  border: 1px solid green;
-  margin-bottom: 1rem;
-  gap: 0.5rem;
+
+  background-color: #fff;
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 8%);
 }
 
 .product-image {
   width: 100%;
   height: auto;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.product-title,
+.product-text,
+.product-information,
+.product-price {
+  padding: 0.5rem 1rem;
+}
+.product-title {
+  font-weight: 200;
+}
+.product-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .product-information {
   width: 100%;
+  height: 100%;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
   flex-direction: column;
   gap: 0.2rem;
+  font-size: 0.6em;
+  /* border: 1px solid orange; */
+}
 
-  border: 1px solid orange;
+.product-information p {
+  font-size: 0.9rem;
 }
 
 .product-information ul li {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .product-price {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid green;
+  gap: 0.4rem;
+  /* border: 1px solid green; */
+}
+
+.product__price-night {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.product__price-text {
+  font-size: 0.8rem;
 }
 /****************************** 
 
@@ -636,6 +689,159 @@ RESPONSIVE MEDIA
   }
   .section-pool {
     grid-area: section-pool;
+  }
+
+  /* BOOKING.HTML LAYOUT */
+
+  .search-booking {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "check-in check-out"
+      "adults children"
+      "btn__search-booking btn__search-booking";
+  }
+
+  .search__check-in {
+    grid-area: check-in;
+  }
+  .search__check-out {
+    grid-area: check-out;
+  }
+  .search-adults {
+    grid-area: adults;
+  }
+  .search-children {
+    grid-area: children;
+  }
+
+  .btn__search-booking {
+    grid-area: btn__search-booking;
+    font-size: 0.8rem;
+  }
+
+  .product-rooms {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "room-1 room-1 info-1 info-1"
+      "room-1 room-1 price-1 price-1"
+      "room-2 room-2 info-2 info-2"
+      "room-2 room-2 price-2 price-2"
+      "room-3 room-3 info-3 info-3"
+      "room-3 room-3 price-3 price-3"
+      "room-4 room-4 info-4 info-4"
+      "room-4 room-4 price-4 price-4"
+      "room-5 room-5 info-5 info-5"
+      "room-5 room-5 price-5 price-5"
+      "room-6 room-6 info-6 info-6"
+      "room-6 room-6 price-6 price-6"
+      "room-7 room-7 info-7 info-7"
+      "room-7 room-7 price-7 price-7"
+      "room-8 room-8 info-8 info-8"
+      "room-8 room-8 price-8 price-8";
+  }
+
+  .product-price {
+    justify-content: flex-end;
+  }
+
+  .room-1 {
+    grid-area: room-1;
+  }
+
+  .info-1 {
+    grid-area: info-1;
+  }
+
+  .price-1 {
+    grid-area: price-1;
+  }
+
+  .room-2 {
+    grid-area: room-2;
+  }
+
+  .info-2 {
+    grid-area: info-2;
+  }
+
+  .price-2 {
+    grid-area: price-2;
+  }
+
+  .room-3 {
+    grid-area: room-3;
+  }
+
+  .info-3 {
+    grid-area: info-3;
+  }
+
+  .price-3 {
+    grid-area: price-3;
+  }
+
+  .room-4 {
+    grid-area: room-4;
+  }
+
+  .info-4 {
+    grid-area: info-4;
+  }
+
+  .price-4 {
+    grid-area: price-4;
+  }
+
+  .room-5 {
+    grid-area: room-5;
+  }
+
+  .info-5 {
+    grid-area: info-5;
+  }
+
+  .price-5 {
+    grid-area: price-5;
+  }
+
+  .room-6 {
+    grid-area: room-6;
+  }
+
+  .info-6 {
+    grid-area: info-6;
+  }
+
+  .price-6 {
+    grid-area: price-6;
+  }
+
+  .room-7 {
+    grid-area: room-7;
+  }
+
+  .info-7 {
+    grid-area: info-7;
+  }
+
+  .price-7 {
+    grid-area: price-7;
+  }
+
+  .room-8 {
+    grid-area: room-8;
+  }
+
+  .info-8 {
+    grid-area: info-8;
+  }
+
+  .price-8 {
+    grid-area: price-8;
   }
 }
 
