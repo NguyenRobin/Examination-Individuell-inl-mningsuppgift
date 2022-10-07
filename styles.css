@@ -24,6 +24,18 @@ h2 {
   font-size: 2rem;
 }
 
+.btn {
+  background-color: #212529;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  color: #fff;
+  border-style: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
 /****************************** 
 /* WRAPPER GRID 
 ******************************/
@@ -71,7 +83,7 @@ HEADER AND NAVIGATION
   /* position: fixed; */
 }
 
-.header-mobile-links {
+.header__mobile-links {
   stroke: #fff;
 }
 
@@ -109,25 +121,14 @@ HEADER AND NAVIGATION
   font-weight: 300;
 }
 
-.btn {
-  background-color: #212529;
-  border-radius: 0.3rem;
-  padding: 1rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  color: #fff;
-  border-style: none;
-  cursor: pointer;
-  font-size: 0.7rem;
-}
 /****************************** 
 MAIN CONTENT
 ******************************/
 
 .main,
-.main-hotel {
+.main__content-hotel,
+.main__content-booking {
   grid-area: main;
-
   display: grid;
 }
 
@@ -141,11 +142,6 @@ MAIN CONTENT
   text-align: center;
   gap: 0.5rem;
   /* border: 2px solid green; */
-}
-
-hr {
-  border: 1px solid black;
-  width: 100%;
 }
 
 .main-heading {
@@ -327,25 +323,12 @@ FOOTER
 /* HOTEL AND FACULTIES: hotel.html 
 *********************************************************************** */
 
-.wrapper-hotel {
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-auto-rows: auto;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer-socials"
-    "footer";
-}
-
 .header-hotel {
   grid-area: header;
   display: flex;
   justify-content: center;
-  background-image: url(images-hotel/hotel-lobby.jpg);
+  background-image: url(images-hotel/robot.jpg);
+  background-color: rgba(33, 37, 41, 0.6);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -430,12 +413,6 @@ FOOTER
 /* SEARCH RESULT ROOM: booking.html 
 *********************************************************************** */
 .wrapper-booking {
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-auto-rows: auto;
   grid-template-areas:
     "header"
     "nav"
@@ -455,6 +432,8 @@ FOOTER
 
   background-image: url(images/assets/photos/09-day.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .search-booking input {
@@ -492,13 +471,12 @@ FOOTER
 }
 
 /* MAIN CONTENT ROOM TO BOOK */
-
-.main-header {
-  grid-area: main;
+.main-heading {
   padding: 1rem;
-  font-weight: 200;
+  font-weight: 300;
   color: #212529;
 }
+
 .product-rooms {
   display: flex;
   justify-content: center;
@@ -572,6 +550,7 @@ FOOTER
 .product__price-text {
   font-size: 0.8rem;
 }
+
 /****************************** 
 
 RESPONSIVE MEDIA 
@@ -599,7 +578,7 @@ RESPONSIVE MEDIA
 }
 
 @media screen and (min-width: 768px) {
-  .header-mobile-links {
+  .header__mobile-links {
     stroke: #fff;
     display: none;
   }
@@ -654,7 +633,7 @@ RESPONSIVE MEDIA
   }
 
   /* HOTEL.HTML LAYOUT */
-  .main-hotel {
+  .main__content-hotel {
     gap: 1rem;
     margin-bottom: 2rem;
     grid-template-columns: 1fr 1fr;

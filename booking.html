@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap"
-    rel="stylesheet"
-  />
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>BOOKING</title>
   </head>
   <body>
-    <div class="wrapper-booking">
-      <nav class="header-navigation booking-navigation">
+    <div class="wrapper wrapper-booking">
+      <!-- NAVIGATOR -->
+      <nav class="header-navigation">
         <figure class="header-logo">
           <img
             src="images/assets/logo/bonz.ai-logo-white-symbol.png"
@@ -22,14 +23,14 @@
           />
         </figure>
 
-        <figure class="header-mobile-links">
+        <figure class="header__mobile-links">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="header-mobile-links"
+            class="header__mobile-links"
             width="50"
           >
             <path
@@ -43,7 +44,7 @@
         <ul class="header__nav-desktop">
           <a href="/booking.html">ROOM</a>
           <a href="/hotel.html">FOOD</a>
-          <a href="/hotel.html">EVENT</a>
+          <a href="/hotel.html">AI</a>
           <a href="/index.html">THE HOTEL</a>
         </ul>
       </nav>
@@ -51,48 +52,71 @@
       <section class="search-booking">
         <form class="search__check-in">
           <label for="">Check-in</label>
-          <input type="date"></input>
+          <input type="date" />
         </form>
 
-          <form class="search__check-out">
+        <form class="search__check-out">
           <label for="">Check-out</label>
-          <input type="date"></input>
+          <input type="date" />
         </form>
 
         <form class="search-adults">
-        <input type="number" placeholder="Adults"></input>
+          <input type="number" placeholder="Adults" />
         </form>
 
         <form class="search-children">
-          <input type="number" placeholder="Children"></input>
-          <!-- <button class="btn__search-increment">- 01 +</button> -->
+          <input type="number" placeholder="Children" />
         </form>
-        
+
         <button class="btn btn__search-booking">SEARCH</button>
       </section>
 
-      <main class="main-content">
-        <h1 class="main-header">SELECT A ROOM</h1>
+      <!-- MAIN CONTENT  -->
+      <main class="main__content-booking">
+        <h1 class="main-heading">SELECT A ROOM</h1>
 
         <article class="product-rooms">
-        <article class="room">
-          <img class="product-image" src="images/assets/photos/01-day.jpg" alt="" width="200">
-        </article>
+          <article class="room">
+            <img
+              class="product-image"
+              src="images/assets/photos/01-day.jpg"
+              alt=""
+              width="200"
+            />
+          </article>
 
           <section class="product-name">
-          <h2 class="product-title">Deluxe AI room </h2>
-          <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vel voluptates amet molestias sequi repellendus odit quo impedit dolorem fugit!</p>
-        </section>
+            <h2 class="product-title">Deluxe AI room</h2>
+            <p class="product-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              vel voluptates amet molestias sequi repellendus odit quo impedit
+              dolorem fugit!
+            </p>
+          </section>
 
           <section class="product-information info">
-          <p>Includes:</p>
-          <ul>
-            <li><img src="images-booking/wifi.png" alt="" width="20">FREE WI-FI</li>  
-            <li> <img src="images-booking/dumbbell.png" alt="" width="20">GYM</li> 
-            <li><img src="images-booking/food.png" alt="" width="20">ROOMSERVICE</li>
-            <li><img src="images-booking/robot.png" alt="" width="20">AI PROTECTION</li>
-          </ul>
-        </section>
+            <p>Includes:</p>
+            <ul>
+              <li>
+                <img src="images-booking/wifi.png" alt="" width="20" />FREE
+                WI-FI
+              </li>
+              <li>
+                <img src="images-booking/dumbbell.png" alt="" width="20" />GYM
+              </li>
+              <li>
+                <img
+                  src="images-booking/food.png"
+                  alt=""
+                  width="20"
+                />ROOMSERVICE
+              </li>
+              <li>
+                <img src="images-booking/robot.png" alt="" width="20" />AI
+                PROTECTION
+              </li>
+            </ul>
+          </section>
 
           <article class="product-price price">
             <span class="product__price-night">$120</span>
@@ -103,183 +127,323 @@
 
         <article class="product-rooms">
           <article class="room">
-            <img class="product-image" src="images/assets/photos/02-day.jpg" alt="" width="200">
+            <img
+              class="product-image"
+              src="images/assets/photos/02-day.jpg"
+              alt=""
+              width="200"
+            />
           </article>
-  
-            <section class="product-name">
-            <h2 class="product-title">Water AI room </h2>
-            <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vel voluptates amet molestias sequi repellendus odit quo impedit dolorem fugit!</p>
+
+          <section class="product-name">
+            <h2 class="product-title">Water AI room</h2>
+            <p class="product-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              vel voluptates amet molestias sequi repellendus odit quo impedit
+              dolorem fugit!
+            </p>
           </section>
-  
-            <section class="product-information info">
+
+          <section class="product-information info">
             <p>Includes:</p>
             <ul>
-              <li><img src="images-booking/wifi.png" alt="" width="20">FREE WI-FI</li>  
-              <li> <img src="images-booking/dumbbell.png" alt="" width="20">GYM</li> 
-              <li><img src="images-booking/food.png" alt="" width="20">ROOMSERVICE</li>
-              <li><img src="images-booking/robot.png" alt="" width="20">AI PROTECTION</li>
+              <li>
+                <img src="images-booking/wifi.png" alt="" width="20" />FREE
+                WI-FI
+              </li>
+              <li>
+                <img src="images-booking/dumbbell.png" alt="" width="20" />GYM
+              </li>
+              <li>
+                <img
+                  src="images-booking/food.png"
+                  alt=""
+                  width="20"
+                />ROOMSERVICE
+              </li>
+              <li>
+                <img src="images-booking/robot.png" alt="" width="20" />AI
+                PROTECTION
+              </li>
             </ul>
           </section>
-  
-            <article class="product-price price">
-              <span class="product__price-night">$139</span>
-              <span class="product__price-text">Per Night</span>
-              <button class="btn btn-product">BOOK NOW</button>
-            </article>
+
+          <article class="product-price price">
+            <span class="product__price-night">$139</span>
+            <span class="product__price-text">Per Night</span>
+            <button class="btn btn-product">BOOK NOW</button>
+          </article>
+        </article>
+
+        <article class="product-rooms">
+          <article class="room">
+            <img
+              class="product-image"
+              src="images/assets/photos/03-day.jpg"
+              alt=""
+              width="200"
+            />
           </article>
 
-          <article class="product-rooms">
-            <article class="room">
-              <img class="product-image" src="images/assets/photos/03-day.jpg" alt="" width="200">
-            </article>
-    
-              <section class="product-name">
-              <h2 class="product-title">Elegant AI room </h2>
-              <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vel voluptates amet molestias sequi repellendus odit quo impedit dolorem fugit!</p>
-            </section>
-    
-              <section class="product-information info">
-              <p>Includes:</p>
-              <ul>
-                <li><img src="images-booking/wifi.png" alt="" width="20">FREE WI-FI</li>  
-                <li> <img src="images-booking/dumbbell.png" alt="" width="20">GYM</li> 
-                <li><img src="images-booking/food.png" alt="" width="20">ROOMSERVICE</li>
-                <li><img src="images-booking/robot.png" alt="" width="20">AI PROTECTION</li>
-              </ul>
-            </section>
-    
-              <article class="product-price price">
-                <span class="product__price-night">$149</span>
-                <span class="product__price-text">Per Night</span>
-                <button class="btn btn-product">BOOK NOW</button>
-              </article>
-            </article>
+          <section class="product-name">
+            <h2 class="product-title">Elegant AI room</h2>
+            <p class="product-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              vel voluptates amet molestias sequi repellendus odit quo impedit
+              dolorem fugit!
+            </p>
+          </section>
 
-            <article class="product-rooms">
-              <article class="room">
-                <img class="product-image" src="images/assets/photos/05-day.jpg" alt="" width="200">
-              </article>
-      
-                <section class="product-name">
-                <h2 class="product-title">Deluxe AI room </h2>
-                <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vel voluptates amet molestias sequi repellendus odit quo impedit dolorem fugit!</p>
-              </section>
-      
-                <section class="product-information info">
-                <p>Includes:</p>
-                <ul>
-                  <li><img src="images-booking/wifi.png" alt="" width="20">FREE WI-FI</li>  
-                  <li> <img src="images-booking/dumbbell.png" alt="" width="20">GYM</li> 
-                  <li><img src="images-booking/food.png" alt="" width="20">ROOMSERVICE</li>
-                  <li><img src="images-booking/robot.png" alt="" width="20">AI PROTECTION</li>
-                </ul>
-              </section>
-      
-                <article class="product-price price">
-                  <span class="product__price-night">$159</span>
-                  <span class="product__price-text">Per Night</span>
-                  <button class="btn btn-product">BOOK NOW</button>
-                </article>
-              </article>
+          <section class="product-information info">
+            <p>Includes:</p>
+            <ul>
+              <li>
+                <img src="images-booking/wifi.png" alt="" width="20" />FREE
+                WI-FI
+              </li>
+              <li>
+                <img src="images-booking/dumbbell.png" alt="" width="20" />GYM
+              </li>
+              <li>
+                <img
+                  src="images-booking/food.png"
+                  alt=""
+                  width="20"
+                />ROOMSERVICE
+              </li>
+              <li>
+                <img src="images-booking/robot.png" alt="" width="20" />AI
+                PROTECTION
+              </li>
+            </ul>
+          </section>
 
-              <article class="product-rooms">
-                <article class="room">
-                  <img class="product-image" src="images/assets/photos/06-day.jpg" alt="" width="200">
-                </article>
-        
-                  <section class="product-name">
-                  <h2 class="product-title">Deluxe AI room </h2>
-                  <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vel voluptates amet molestias sequi repellendus odit quo impedit dolorem fugit!</p>
-                </section>
-        
-                  <section class="product-information info">
-                  <p>Includes:</p>
-                  <ul>
-                    <li><img src="images-booking/wifi.png" alt="" width="20">FREE WI-FI</li>  
-                    <li> <img src="images-booking/dumbbell.png" alt="" width="20">GYM</li> 
-                    <li><img src="images-booking/food.png" alt="" width="20">ROOMSERVICE</li>
-                    <li><img src="images-booking/robot.png" alt="" width="20">AI PROTECTION</li>
-                  </ul>
-                </section>
-        
-                  <article class="product-price price">
-                    <span class="product__price-night">$169</span>
-                    <span class="product__price-text">Per Night</span>
-                    <button class="btn btn-product">BOOK NOW</button>
-                  </article>
-                </article>
+          <article class="product-price price">
+            <span class="product__price-night">$149</span>
+            <span class="product__price-text">Per Night</span>
+            <button class="btn btn-product">BOOK NOW</button>
+          </article>
+        </article>
 
-                <article class="product-rooms">
-                  <article class="room">
-                    <img class="product-image" src="images/assets/photos/02-day.jpg" alt="" width="200">
-                  </article>
-          
-                    <section class="product-name">
-                    <h2 class="product-title">Superior AI room</h2>
-                    <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vel voluptates amet molestias sequi repellendus odit quo impedit dolorem fugit!</p>
-                  </section>
-          
-                    <section class="product-information info">
-                    <p>Includes:</p>
-                    <ul>
-                      <li><img src="images-booking/wifi.png" alt="" width="20">FREE WI-FI</li>  
-                      <li> <img src="images-booking/dumbbell.png" alt="" width="20">GYM</li> 
-                      <li><img src="images-booking/food.png" alt="" width="20">ROOMSERVICE</li>
-                      <li><img src="images-booking/robot.png" alt="" width="20">AI PROTECTION</li>
-                    </ul>
-                  </section>
-          
-                    <article class="product-price price">
-                      <span class="product__price-night">$179</span>
-                      <span class="product__price-text">Per Night</span>
-                      <button class="btn btn-product">BOOK NOW</button>
-                    </article>
-                  </article>
-                  <article class="product-rooms">
-                    <article class="room">
-                      <img class="product-image" src="images/assets/photos/09-day.jpg" alt="" width="200">
-                    </article>
-            
-                      <section class="product-name">
-                      <h2 class="product-title">Peaceful AI room </h2>
-                      <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vel voluptates amet molestias sequi repellendus odit quo impedit dolorem fugit!</p>
-                    </section>
-            
-                      <section class="product-information info">
-                      <p>Includes:</p>
-                      <ul>
-                        <li><img src="images-booking/wifi.png" alt="" width="20">FREE WI-FI</li>  
-                        <li> <img src="images-booking/dumbbell.png" alt="" width="20">GYM</li> 
-                        <li><img src="images-booking/food.png" alt="" width="20">ROOMSERVICE</li>
-                        <li><img src="images-booking/robot.png" alt="" width="20">AI PROTECTION</li>
-                      </ul>
-                    </section>
-            
-                      <article class="product-price price">
-                        <span class="product__price-night">$189</span>
-                        <span class="product__price-text">Per Night</span>
-                        <button class="btn btn-product">BOOK NOW</button>
-                      </article>
-                    </article>
+        <article class="product-rooms">
+          <article class="room">
+            <img
+              class="product-image"
+              src="images/assets/photos/05-day.jpg"
+              alt=""
+              width="200"
+            />
+          </article>
+
+          <section class="product-name">
+            <h2 class="product-title">Deluxe AI room</h2>
+            <p class="product-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              vel voluptates amet molestias sequi repellendus odit quo impedit
+              dolorem fugit!
+            </p>
+          </section>
+
+          <section class="product-information info">
+            <p>Includes:</p>
+            <ul>
+              <li>
+                <img src="images-booking/wifi.png" alt="" width="20" />FREE
+                WI-FI
+              </li>
+              <li>
+                <img src="images-booking/dumbbell.png" alt="" width="20" />GYM
+              </li>
+              <li>
+                <img
+                  src="images-booking/food.png"
+                  alt=""
+                  width="20"
+                />ROOMSERVICE
+              </li>
+              <li>
+                <img src="images-booking/robot.png" alt="" width="20" />AI
+                PROTECTION
+              </li>
+            </ul>
+          </section>
+
+          <article class="product-price price">
+            <span class="product__price-night">$159</span>
+            <span class="product__price-text">Per Night</span>
+            <button class="btn btn-product">BOOK NOW</button>
+          </article>
+        </article>
+
+        <article class="product-rooms">
+          <article class="room">
+            <img
+              class="product-image"
+              src="images/assets/photos/06-day.jpg"
+              alt=""
+              width="200"
+            />
+          </article>
+
+          <section class="product-name">
+            <h2 class="product-title">Deluxe AI room</h2>
+            <p class="product-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              vel voluptates amet molestias sequi repellendus odit quo impedit
+              dolorem fugit!
+            </p>
+          </section>
+
+          <section class="product-information info">
+            <p>Includes:</p>
+            <ul>
+              <li>
+                <img src="images-booking/wifi.png" alt="" width="20" />FREE
+                WI-FI
+              </li>
+              <li>
+                <img src="images-booking/dumbbell.png" alt="" width="20" />GYM
+              </li>
+              <li>
+                <img
+                  src="images-booking/food.png"
+                  alt=""
+                  width="20"
+                />ROOMSERVICE
+              </li>
+              <li>
+                <img src="images-booking/robot.png" alt="" width="20" />AI
+                PROTECTION
+              </li>
+            </ul>
+          </section>
+
+          <article class="product-price price">
+            <span class="product__price-night">$169</span>
+            <span class="product__price-text">Per Night</span>
+            <button class="btn btn-product">BOOK NOW</button>
+          </article>
+        </article>
+
+        <article class="product-rooms">
+          <article class="room">
+            <img
+              class="product-image"
+              src="images/assets/photos/02-day.jpg"
+              alt=""
+              width="200"
+            />
+          </article>
+
+          <section class="product-name">
+            <h2 class="product-title">Superior AI room</h2>
+            <p class="product-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              vel voluptates amet molestias sequi repellendus odit quo impedit
+              dolorem fugit!
+            </p>
+          </section>
+
+          <section class="product-information info">
+            <p>Includes:</p>
+            <ul>
+              <li>
+                <img src="images-booking/wifi.png" alt="" width="20" />FREE
+                WI-FI
+              </li>
+              <li>
+                <img src="images-booking/dumbbell.png" alt="" width="20" />GYM
+              </li>
+              <li>
+                <img
+                  src="images-booking/food.png"
+                  alt=""
+                  width="20"
+                />ROOMSERVICE
+              </li>
+              <li>
+                <img src="images-booking/robot.png" alt="" width="20" />AI
+                PROTECTION
+              </li>
+            </ul>
+          </section>
+
+          <article class="product-price price">
+            <span class="product__price-night">$179</span>
+            <span class="product__price-text">Per Night</span>
+            <button class="btn btn-product">BOOK NOW</button>
+          </article>
+        </article>
+        <article class="product-rooms">
+          <article class="room">
+            <img
+              class="product-image"
+              src="images/assets/photos/09-day.jpg"
+              alt=""
+              width="200"
+            />
+          </article>
+
+          <section class="product-name">
+            <h2 class="product-title">Peaceful AI room</h2>
+            <p class="product-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+              vel voluptates amet molestias sequi repellendus odit quo impedit
+              dolorem fugit!
+            </p>
+          </section>
+
+          <section class="product-information info">
+            <p>Includes:</p>
+            <ul>
+              <li>
+                <img src="images-booking/wifi.png" alt="" width="20" />FREE
+                WI-FI
+              </li>
+              <li>
+                <img src="images-booking/dumbbell.png" alt="" width="20" />GYM
+              </li>
+              <li>
+                <img
+                  src="images-booking/food.png"
+                  alt=""
+                  width="20"
+                />ROOMSERVICE
+              </li>
+              <li>
+                <img src="images-booking/robot.png" alt="" width="20" />AI
+                PROTECTION
+              </li>
+            </ul>
+          </section>
+
+          <article class="product-price price">
+            <span class="product__price-night">$189</span>
+            <span class="product__price-text">Per Night</span>
+            <button class="btn btn-product">BOOK NOW</button>
+          </article>
+        </article>
       </main>
+
       <!-- FOOTER -->
       <footer class="footer-socials">
         <img src="social-media/facebook.svg" alt="facebook-icon" />
-         <img src="social-media/instagram.svg" alt="instagram-icon" />
+        <img src="social-media/instagram.svg" alt="instagram-icon" />
         <img src="social-media/twitter.svg" alt="twitter-icon" />
         <img src="social-media/tiktok.svg" alt="tiktok-icon" />
       </footer>
       <footer class="footer">
         <address class="footer-menu footer__menu-booking">
           <h2>Visit us</h2>
-          <p>Vallgatan 25, 411 16 Göteborg</p></address>
-          
-          <address class="footer-menu">
-            <h2>Contact</h2>
-            <a href="mailto:info@boonz.ai">info@boonz.ai</a>
-            <a href="tel:010101010">010101010</a>
-          </address>
-        </footer>
+          <p>Vallgatan 25, 411 16 Göteborg</p>
+        </address>
+
+        <address class="footer-menu">
+          <h2>Contact</h2>
+          <a href="mailto:info@boonz.ai">info@boonz.ai</a>
+          <a href="tel:010101010">010101010</a>
+        </address>
+      </footer>
     </div>
   </body>
 </html>
