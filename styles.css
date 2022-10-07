@@ -721,127 +721,50 @@ RESPONSIVE MEDIA
     font-size: 0.8rem;
   }
 
+  .product-information ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .product-information ul li {
+    gap: 0.3rem;
+  }
+
   .product-rooms {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     grid-template-areas:
-      "room-1 room-1 info-1 info-1"
-      "room-1 room-1 price-1 price-1"
-      "room-2 room-2 info-2 info-2"
-      "room-2 room-2 price-2 price-2"
-      "room-3 room-3 info-3 info-3"
-      "room-3 room-3 price-3 price-3"
-      "room-4 room-4 info-4 info-4"
-      "room-4 room-4 price-4 price-4"
-      "room-5 room-5 info-5 info-5"
-      "room-5 room-5 price-5 price-5"
-      "room-6 room-6 info-6 info-6"
-      "room-6 room-6 price-6 price-6"
-      "room-7 room-7 info-7 info-7"
-      "room-7 room-7 price-7 price-7"
-      "room-8 room-8 info-8 info-8"
-      "room-8 room-8 price-8 price-8";
+      "room room product-name product-name"
+      "room room info info"
+      "room room price price";
   }
 
   .product-price {
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1rem;
   }
 
-  .room-1 {
-    grid-area: room-1;
+  .btn-product {
+    flex-grow: 1;
   }
 
-  .info-1 {
-    grid-area: info-1;
+  .room {
+    grid-area: room;
   }
 
-  .price-1 {
-    grid-area: price-1;
+  .product-name {
+    grid-area: product-name;
   }
 
-  .room-2 {
-    grid-area: room-2;
+  .info {
+    grid-area: info;
   }
 
-  .info-2 {
-    grid-area: info-2;
-  }
-
-  .price-2 {
-    grid-area: price-2;
-  }
-
-  .room-3 {
-    grid-area: room-3;
-  }
-
-  .info-3 {
-    grid-area: info-3;
-  }
-
-  .price-3 {
-    grid-area: price-3;
-  }
-
-  .room-4 {
-    grid-area: room-4;
-  }
-
-  .info-4 {
-    grid-area: info-4;
-  }
-
-  .price-4 {
-    grid-area: price-4;
-  }
-
-  .room-5 {
-    grid-area: room-5;
-  }
-
-  .info-5 {
-    grid-area: info-5;
-  }
-
-  .price-5 {
-    grid-area: price-5;
-  }
-
-  .room-6 {
-    grid-area: room-6;
-  }
-
-  .info-6 {
-    grid-area: info-6;
-  }
-
-  .price-6 {
-    grid-area: price-6;
-  }
-
-  .room-7 {
-    grid-area: room-7;
-  }
-
-  .info-7 {
-    grid-area: info-7;
-  }
-
-  .price-7 {
-    grid-area: price-7;
-  }
-
-  .room-8 {
-    grid-area: room-8;
-  }
-
-  .info-8 {
-    grid-area: info-8;
-  }
-
-  .price-8 {
-    grid-area: price-8;
+  .price {
+    grid-area: price;
   }
 }
 
@@ -863,5 +786,32 @@ RESPONSIVE MEDIA
 
   .fake-button {
     align-self: center;
+  }
+
+  .search-booking {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: "check-in check-out adults children btn__search-booking";
+  }
+
+  .search__check-in {
+    grid-area: check-in;
+  }
+  .search__check-out {
+    grid-area: check-out;
+  }
+  .search-adults {
+    grid-area: adults;
+    align-self: flex-end;
+  }
+  .search-children {
+    grid-area: children;
+    align-self: flex-end;
+  }
+
+  .btn__search-booking {
+    grid-area: btn__search-booking;
+    align-self: flex-end;
   }
 }
