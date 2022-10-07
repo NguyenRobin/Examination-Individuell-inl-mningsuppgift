@@ -17,11 +17,12 @@
       <header class="header">
         <nav class="header-navigation">
           <figure class="header-logo">
-            <img
-              src="images/assets/logo/bonz.ai-logo-white-symbol.png"
-              alt="company-logo"
-              width="50"
-            />
+            <a href="/index.html">
+              <img
+                src="images/assets/logo/bonz.ai-logo-white-symbol.png"
+                alt="company-logo"
+                width="50"
+            /></a>
           </figure>
 
           <figure class="header__mobile-links">
@@ -45,7 +46,7 @@
           <ul class="header__nav-desktop">
             <a href="/booking.html">ROOM</a>
             <a href="/hotel.html">FOOD</a>
-            <a href="/hotel.html">AI</a>
+            <a href="/index.html">AI</a>
             <a href="/hotel.html">THE HOTEL</a>
           </ul>
         </nav>
@@ -56,16 +57,23 @@
             alt=""
             width="50"
           />
-          <h1 class="header-heading">Boonz.ai hotel</h1>
+          <h1 class="header-heading">Bonz.ai hotel</h1>
           <p>Gothenburg Sweden</p>
-          <button class="btn btn-primary">BOOK A ROOM</button>
+          <button
+            class="btn btn-primary"
+            onclick="document.location='booking.html'"
+          >
+            BOOK A ROOM
+          </button>
         </section>
       </header>
 
       <!-- MAIN CONTENT  -->
       <main class="main">
         <section class="main-information">
-          <h2 class="main-heading">Bonz.ai hotel - five star ai hotel</h2>
+          <h2 class="main-heading">
+            Bonz.ai hotel - five star ai driven eko living hotel
+          </h2>
           <figure class="main-rating">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -267,8 +275,12 @@
                 </svg>
               </figure>
             </section>
-            <!-- <button class="btn btn__book-now">BOOK NOW</button> -->
-            <a class="fake-button" href="/booking.html">BOOK NOW</a>
+            <button
+              class="btn btn__book-now"
+              onclick="document.location='booking.html'"
+            >
+              BOOK NOW
+            </button>
           </section>
         </section>
 
